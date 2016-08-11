@@ -1,8 +1,9 @@
 <?php
 
+header("Content-type: text/plain");
 
-$dlurl = "https://wordpress.org/latest.zip";
-// $dlurl = "./latestwp/latest.zip";
+// $dlurl = "https://wordpress.org/latest.zip";
+$dlurl = "./latestwp/latest.zip";
 $dlfile = "latest.zip";
 $destfolder  = realpath("./");
 
@@ -24,7 +25,6 @@ if(file_exists($dlfile)){
   }
   unlink($dlfile);
   echo "Removed downloaded archive " . $dlfile . PHP_EOL;
-
 }
 
 // Prevent further execution
@@ -33,6 +33,11 @@ $newfile = $thisfile . ".phps";
 rename(__FILE__, $newfile);
 
 echo "Renamed " . basename(__FILE__) . " to " . $newfile . " to prevent further execution"  . PHP_EOL;
+
+
+// Move to root dir
+
+
 
 
 ?>
