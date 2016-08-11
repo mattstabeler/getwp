@@ -14,5 +14,6 @@ if ($zip->open('latest.zip') === TRUE) {
 
 unlink("latest.zip");
 
-rename(__FILE__, __FILE__ . ".phps");
+$file = basename(__FILE__, ".php");
+rename(__FILE__, $file . ".phps");
 ?>
