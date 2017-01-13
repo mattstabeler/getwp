@@ -2,8 +2,8 @@
 
 header("Content-type: text/plain");
 
-// $dlurl = "https://wordpress.org/latest.zip";
-$dlurl = "./latestwp/latest.zip";
+$dlurl = "https://wordpress.org/latest.zip";
+// $dlurl = "./latestwp/latest.zip";
 $dlfile = "latest.zip";
 $destfolder  = realpath("./");
 
